@@ -3,5 +3,66 @@
 @{
     ViewData["Title"] = "Home page";
 }
+    <div class="content">
+        <div class="results">
 
-<h1>Hello World</h1>
+
+            <h1>Movies</h1>
+            @foreach (Movie movie in Model.Movies)
+            {
+                <div class="movie-entry">
+                    <h2>@movie.Title (@movie.Year)</h2>
+                    <p>@movie.Title (@movie.Year)</p>
+                    <div class="reviews">
+                        <div>
+                            Rotten Tomatoes
+                            <h3>
+                                @movie.Rotten_Tomatoes_Rating
+                            </h3>
+                        </div>
+                        <div>
+                            MPAA
+                            <h3>
+                                @movie.MPAA_Rating
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+
+        <form method="post">
+            <input type="text" name="search" />
+            <input type="submit" value="Search" />
+            <div class="checkbox-list">
+                <label>
+                    <input type="checkbox" name="rating" value="G" />
+                    Rated G
+                </label>
+                <label>
+                    <input type="checkbox" name="rating" value="PG" />
+                    Rated PG
+                </label>
+                <label>
+                    <input type="checkbox" name="rating" value="PG-13" />
+                    Rated PG-13
+                </label>
+                <label>
+                    <input type="checkbox" name="rating" value="R" />
+                    Rated R
+                </label>
+                <label>
+                    <input type="checkbox" name="rating" value="NC-17" />
+                    Rated NC-17
+                </label>
+            </div>
+        </form>
+        
+        
+                
+                
+          
+        
+
+</div>
+
