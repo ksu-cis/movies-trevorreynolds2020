@@ -54,7 +54,7 @@ namespace Movies.Pages
                // Movies = MovieDatabase.FilterByMPAA(Movies, rating);
             }
             if(minIMDB != null)
-            {f
+            {
                 Movies = Movies.Where(movie => movie.IMDB_Rating != null && movie.IMDB_Rating >= minIMDB);
               //  Movies = MovieDatabase.FilterByMinIMDB(Movies, (float)minIMDB);
             }
